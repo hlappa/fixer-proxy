@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  fixer_proxy:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - '4000:4000'
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
